@@ -13,7 +13,7 @@ if (faviconLink) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/MissionJokerPOC">
       <App />
     </BrowserRouter>
   </StrictMode>,
