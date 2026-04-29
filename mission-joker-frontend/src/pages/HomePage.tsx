@@ -67,6 +67,19 @@ export function HomePage({ role, playerTeamName, onOpenLogin }: HomePageProps) {
         </section>
       )}
 
+      {role === 'jury' && (
+        <section className="panel">
+          <h2>Espace joueur jury</h2>
+          <p>Bienvenue sur le mode de demonstration jury.</p>
+          <p>Ce mode propose un dashboard simplifie, un parcours unique et une epreuve unique.</p>
+          <div className="cta-row">
+            <Link to="/jury/dashboard" className="btn btn-primary">
+              Acceder au dashboard jury
+            </Link>
+          </div>
+        </section>
+      )}
+
       {role === 'admin' && (
         <section className="panel">
           <h2>Back-office admin (simulation front)</h2>
@@ -90,12 +103,15 @@ export function HomePage({ role, playerTeamName, onOpenLogin }: HomePageProps) {
             <article className="info-box">
               <h3>Actions rapides</h3>
               <div className="stack">
-                <button type="button" className="btn btn-secondary">
+                <Link to="/admin/sessions/create" className="btn btn-secondary">
                   Creer une session
-                </button>
-                <button type="button" className="btn btn-secondary">
-                  Ajouter une epreuve
-                </button>
+                </Link>
+                <Link to="/admin/tests/library" className="btn btn-secondary">
+                  Bibliotheque epreuves
+                </Link>
+                <Link to="/admin/routes/library" className="btn btn-secondary">
+                  Bibliotheque parcours
+                </Link>
                 <button type="button" className="btn btn-primary">
                   Valider une epreuve manuellement
                 </button>

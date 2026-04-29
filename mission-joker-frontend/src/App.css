@@ -190,6 +190,10 @@ h1 {
   gap: 8px;
 }
 
+.admin-form {
+  margin-top: 10px;
+}
+
 input,
 select {
   width: 100%;
@@ -199,6 +203,17 @@ select {
   color: #f5f4f4;
   border-radius: 8px;
   padding: 10px;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #161720;
+  border: 1px solid #4a4f62;
+  color: #f5f4f4;
+  border-radius: 8px;
+  padding: 10px;
+  resize: vertical;
 }
 
 .challenge-list {
@@ -402,6 +417,54 @@ select {
   color: #9ec3ff;
 }
 
+.preview-table {
+  margin-top: 10px;
+  border: 1px solid #324159;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.preview-row {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 0.8fr;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #293247;
+  font-size: 0.95rem;
+}
+
+.preview-row-4 {
+  grid-template-columns: 1.6fr 0.8fr 1fr 1.4fr;
+}
+
+.preview-row-5 {
+  grid-template-columns: 1.6fr 0.8fr 1fr 1fr 1fr;
+}
+
+.preview-row-6 {
+  grid-template-columns: 1.6fr 0.8fr 1fr 1fr 1fr 1.4fr;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-inline {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.preview-row:last-child {
+  border-bottom: 0;
+}
+
+.preview-head {
+  background: #1c2536;
+  font-weight: 700;
+}
+
 .profile-list {
   background: #0f1015;
   border: 1px solid #30313a;
@@ -545,6 +608,23 @@ select {
   }
 
   .level-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .preview-row-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-row-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-row-6 {
     grid-template-columns: 1fr;
   }
 

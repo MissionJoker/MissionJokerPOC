@@ -30,11 +30,16 @@ export function Header({ role, onOpenLogin, onOpenProfile, onLogout }: HeaderPro
             Mon equipe
           </NavLink>
         )}
+        {role === 'jury' && (
+          <NavLink to="/jury/dashboard" className="nav-link">
+            Dashboard jury
+          </NavLink>
+        )}
         {role === 'visiteur' ? (
           <button type="button" className="btn-nav-login" onClick={onOpenLogin}>
             Connexion
           </button>
-        ) : role === 'joueur' || role === 'inscrit' ? (
+        ) : role === 'joueur' || role === 'inscrit' || role === 'jury' ? (
           <button type="button" onClick={onOpenProfile}>
             Profil
           </button>

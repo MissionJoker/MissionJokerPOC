@@ -15,6 +15,12 @@ export const mockChallenges: Challenge[] = [
 
 export const mockAccounts = {
   joueur: { login: 'joueur@mission-joker.org', password: 'joueur123', role: 'joueur' as const },
+  jury: {
+    login: 'jury@mission-joker.org',
+    password: 'jury123',
+    role: 'jury' as const,
+    pseudo: 'Jury Solo',
+  },
   inscrit: {
     login: 'inscrit@mission-joker.org',
     password: 'inscrit123',

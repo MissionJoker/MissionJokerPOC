@@ -1,4 +1,4 @@
-export type Role = 'visiteur' | 'inscrit' | 'joueur' | 'admin'
+export type Role = 'visiteur' | 'inscrit' | 'joueur' | 'jury' | 'admin'
 export type AuthMode = 'login' | 'signup'
 
 export type Team = {

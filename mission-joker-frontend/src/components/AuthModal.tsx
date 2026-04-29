@@ -61,8 +61,8 @@ export function AuthModal({
               </button>
             </p>
             <p className="hint">
-              Joueur: joueur@mission-joker.org / joueur123 - Inscrit: inscrit@mission-joker.org / inscrit123 - Admin:
-              admin@mission-joker.org / admin123
+              Joueur: joueur@mission-joker.org / joueur123 - Jury: jury@mission-joker.org / jury123 - Inscrit:
+              inscrit@mission-joker.org / inscrit123 - Admin: admin@mission-joker.org / admin123
             </p>
           </>
         ) : (

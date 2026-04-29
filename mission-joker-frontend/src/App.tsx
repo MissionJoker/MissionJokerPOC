@@ -43,6 +43,11 @@ function App() {
       }
       return
     }
+    if (login === mockAccounts.jury.login && password === mockAccounts.jury.password) {
+      setRole('jury')
+      setIsAuthOpen(false)
+      return
+    }
     if (login === mockAccounts.inscrit.login && password === mockAccounts.inscrit.password) {
       setRole('inscrit')
       setIsAuthOpen(false)
@@ -119,11 +124,23 @@ function App() {
         </div>
       )}
 
-      {isProfileOpen && (role === 'joueur' || role === 'inscrit') && (
+      {isProfileOpen && (role === 'joueur' || role === 'inscrit' || role === 'jury') && (
         <ProfileModal
-          pseudo={role === 'joueur' ? 'Agent Nox' : mockAccounts.inscrit.pseudo}
-          email={role === 'joueur' ? mockAccounts.joueur.login : login || mockAccounts.inscrit.login}
-          statusLabel={role === 'joueur' ? 'Joueur' : 'Inscrit'}
+          pseudo={
+            role === 'joueur'
+              ? 'Agent Nox'
+              : role === 'jury'
+                ? mockAccounts.jury.pseudo
+                : mockAccounts.inscrit.pseudo
+          }
+          email={
+            role === 'joueur'
+              ? mockAccounts.joueur.login
+              : role === 'jury'
+                ? mockAccounts.jury.login
+                : login || mockAccounts.inscrit.login
+          }
+          statusLabel={role === 'joueur' ? 'Joueur' : role === 'jury' ? 'Joueur Jury' : 'Inscrit'}
           onClose={() => setIsProfileOpen(false)}
           onChangePassword={() => window.alert('Fonction mock: modification du mot de passe.')}
           onLogout={handleLogout}
