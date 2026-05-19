@@ -28,14 +28,14 @@ export function JuryEpreuvePage({ role }: JuryEpreuvePageProps) {
 
       <article className="info-box">
         <h3>Description de l&apos;epreuve</h3>
-        <p>Contenu a venir (brief jury).</p>
+        <p>Le Joker a fait falsifier un ou plusieurs éléments d'un rapport d'autopsie d'un meurtre, à vous d'enquêter pour trouver la vérité.</p>
       </article>
 
       <article className="resource-box">
         <h3>Ressources</h3>
         <ul className="compact-list">
-          <li>Lien 1 (a definir)</li>
-          <li>Lien 2 (a definir)</li>
+          <li>aucun</li>
+          <li>aucun</li>
         </ul>
       </article>
 
@@ -102,7 +102,7 @@ export function JuryEpreuvePage({ role }: JuryEpreuvePageProps) {
               ×
             </button>
             <h2>Bravo !</h2>
-            <p>Vous avez reussi, vous avez gagne un canele !</p>
+            <p>Vous avez reussi, vous avez gagne un cannelé pour votre effort !</p>
             <button type="button" className="btn btn-primary full" onClick={() => setIsSuccessOpen(false)}>
               Fermer
             </button>
