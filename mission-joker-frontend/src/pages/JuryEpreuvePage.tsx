@@ -24,7 +24,7 @@ export function JuryEpreuvePage({ role }: JuryEpreuvePageProps) {
   return (
     <section className="panel">
       <h2>Epreuve Jury - Valet</h2>
-      <p className="hint">Page prete pour integrer le contenu final et la reponse attendue.</p>
+      
 
       <article className="info-box">
         <h3>Description de l&apos;epreuve</h3>
@@ -34,8 +34,9 @@ export function JuryEpreuvePage({ role }: JuryEpreuvePageProps) {
       <article className="resource-box">
         <h3>Ressources</h3>
         <ul className="compact-list">
-          <li>aucun</li>
-          <li>aucun</li>
+          <li>Le rapport d'autopsie</li>
+          <li>La note du docteur LEMAIRE</li>
+          <li>Le courriel du Joker</li>
         </ul>
       </article>
 
